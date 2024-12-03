@@ -40,9 +40,9 @@ class SignupView(APIView):
             # Connect to the PostgreSQL database
             connection = psycopg.connect(
                 dbname='users', 
-                user='postgres',  # Replace with your DB username
-                password='Aspyr12345!',  # Replace with your DB password
-                host='13.53.81.202',  # Adjust if different
+                user='Prashanth',  # Replace with your DB username
+                password='Sa@123,.',  # Replace with your DB password
+                host='flowisetest2024sep.postgres.database.azure.com',  # Adjust if different
                 port='5432'  # Adjust if using a different port
             )
             cursor = connection.cursor()
@@ -83,9 +83,9 @@ class AuthenticateView(APIView):
             # Connect to the PostgreSQL database
             connection = psycopg.connect(
                 dbname='users', 
-                user='postgres',  # Replace with your DB username
-                password='Aspyr12345!',  # Replace with your DB password
-                host='13.53.81.202',  # Adjust if different
+                user='Prashanth',  # Replace with your DB username
+                password='Sa@123,.',  # Replace with your DB password
+                host='flowisetest2024sep.postgres.database.azure.com',  # Adjust if different
                 port='5432'  # Adjust if using a different port
             )
             cursor = connection.cursor()
