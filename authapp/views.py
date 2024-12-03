@@ -115,7 +115,7 @@ class AuthenticateView(APIView):
             # Close the connection
             if connection:
                 cursor.close()
-                connection.close()           
+                connection.close()
 
         # Authenticate the user
         # user = authenticate(email=usr_id, password=usr_pass)
