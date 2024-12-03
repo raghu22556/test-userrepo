@@ -12,9 +12,9 @@ def get_db_connection():
     """Establish and return a database connection."""
     return connect(
         dbname='users',
-        user='postgres',
-        password='Aspyr12345!',
-        host='13.53.81.202',
+        user='Prashanth',
+        password='Sa@123,.',
+        host='flowisetest2024sep.postgres.database.azure.com',
         port='5432'
     )
 
