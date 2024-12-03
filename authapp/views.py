@@ -42,7 +42,7 @@ class SignupView(APIView):
                 dbname='users', 
                 user='postgres',  # Replace with your DB username
                 password='Aspyr12345!',  # Replace with your DB password
-                host='localhost',  # Adjust if different
+                host='13.53.81.202',  # Adjust if different
                 port='5432'  # Adjust if using a different port
             )
             cursor = connection.cursor()
@@ -85,7 +85,7 @@ class AuthenticateView(APIView):
                 dbname='users', 
                 user='postgres',  # Replace with your DB username
                 password='Aspyr12345!',  # Replace with your DB password
-                host='localhost',  # Adjust if different
+                host='13.53.81.202',  # Adjust if different
                 port='5432'  # Adjust if using a different port
             )
             cursor = connection.cursor()
