@@ -20,7 +20,16 @@ from django.conf import settings
 
 class SignupView(APIView):
     def post(self, request):
-        connection = None
+        # Connect to the PostgreSQL database
+        connection = psycopg.connect(
+            dbname='users', 
+            user='Prashanth',  # Replace with your DB username
+            password='Sa@123,.',  # Replace with your DB password
+            host='flowisetest2024sep.postgres.database.azure.com',  # Adjust if different
+            port='5432'  # Adjust if using a different port
+        )
+        cursor = connection.cursor()
+        
         # Extract data from the request body
         email = request.data.get('email')
         username = request.data.get('username')
@@ -37,15 +46,6 @@ class SignupView(APIView):
             )
 
         try:
-            # Connect to the PostgreSQL database
-            connection = psycopg.connect(
-                dbname='users', 
-                user='Prashanth',  # Replace with your DB username
-                password='Sa@123,.',  # Replace with your DB password
-                host='flowisetest2024sep.postgres.database.azure.com',  # Adjust if different
-                port='5432'  # Adjust if using a different port
-            )
-            cursor = connection.cursor()
 
             # Insert data into the credentials table
             insert_query = """
@@ -69,7 +69,17 @@ class SignupView(APIView):
 
 class AuthenticateView(APIView):
     def post(self, request):
-        connection = None
+
+        # Connect to the PostgreSQL database
+        connection = psycopg.connect(
+            dbname='users', 
+            user='Prashanth',  # Replace with your DB username
+            password='Sa@123,.',  # Replace with your DB password
+            host='flowisetest2024sep.postgres.database.azure.com',  # Adjust if different
+            port='5432'  # Adjust if using a different port
+        )
+        cursor = connection.cursor()
+        
         # Extract usr_id and usr_pass from the request body
         usr_id = request.data.get('email')
         usr_pass = request.data.get('password')
@@ -80,15 +90,7 @@ class AuthenticateView(APIView):
 
 
         try:
-            # Connect to the PostgreSQL database
-            connection = psycopg.connect(
-                dbname='users', 
-                user='Prashanth',  # Replace with your DB username
-                password='Sa@123,.',  # Replace with your DB password
-                host='flowisetest2024sep.postgres.database.azure.com',  # Adjust if different
-                port='5432'  # Adjust if using a different port
-            )
-            cursor = connection.cursor()
+            
 
             cursor.execute("""
             SELECT password, username
