@@ -69,6 +69,7 @@ class SignupView(APIView):
 
 class AuthenticateView(APIView):
     def post(self, request):
+        connection = None
         # Extract usr_id and usr_pass from the request body
         usr_id = request.data.get('email')
         usr_pass = request.data.get('password')
@@ -113,7 +114,6 @@ class AuthenticateView(APIView):
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         finally:
-            # Close the connection
             # Close the connection
             if connection:
                 cursor.close()
