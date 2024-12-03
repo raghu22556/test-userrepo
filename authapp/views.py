@@ -96,8 +96,7 @@ class AuthenticateView(APIView):
 
             password, username = cursor.fetchone()
             print(cursor.fetchone())
-cursor.close()
-                connection.close()
+
             if check_password(usr_pass, password):
                 print('Authenticated')
                 # Generate JWT token if authentication is successful
@@ -114,8 +113,9 @@ cursor.close()
 
         finally:
             # Close the connection
-            # if connection:
-                
+            if connection:
+                cursor.close()
+                connection.close()           
 
         # Authenticate the user
         # user = authenticate(email=usr_id, password=usr_pass)
