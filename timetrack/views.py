@@ -14,7 +14,7 @@ def get_db_connection():
         dbname='users',
         user='postgres',
         password='Aspyr12345!',
-        host='13.53.81.202',
+        host='users.c5ogq6mocj85.eu-north-1.rds.amazonaws.com',
         port='5432'
     )
 
