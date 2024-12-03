@@ -113,6 +113,7 @@ class AuthenticateView(APIView):
 
         finally:
             # Close the connection
+            # Close the connection
             if connection:
                 cursor.close()
                 connection.close()
