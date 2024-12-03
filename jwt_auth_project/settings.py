@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'users',
         'USER': 'postgres',
         'PASSWORD': 'Aspyr12345!',
-        'HOST': 'localhost',
+        'HOST': '13.53.81.202',
         'PORT': '5432'
     }
 }

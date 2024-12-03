@@ -14,7 +14,7 @@ def get_db_connection():
         dbname='users',
         user='postgres',
         password='Aspyr12345!',
-        host='localhost',
+        host='13.53.81.202',
         port='5432'
     )
 
@@ -343,7 +343,7 @@ def is_valid_filter(selected_filter: str) -> bool:
 #                 dbname='users',
 #                 user='postgres',
 #                 password='Aspyr12345!',
-#                 host='localhost',
+#                 host='host',
 #                 port='5432'
 #             )
 #             cursor = conn.cursor()
