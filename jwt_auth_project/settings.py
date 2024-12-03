@@ -25,7 +25,7 @@ SECRET_KEY = 'Aspyr12345'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.53.81.202' 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
