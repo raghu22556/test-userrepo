@@ -81,9 +81,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'users',
-        'USER': 'postgres',
-        'PASSWORD': 'Aspyr12345!',
-        'HOST': '13.53.81.202',
+        'USER': 'Prashanth',
+        'PASSWORD': 'Sa@123,.',
+        'HOST': 'flowisetest2024sep.postgres.database.azure.com',
         'PORT': '5432'
     }
 }
