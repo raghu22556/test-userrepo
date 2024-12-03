@@ -20,6 +20,7 @@ from django.conf import settings
 
 class SignupView(APIView):
     def post(self, request):
+        connection = None
         # Extract data from the request body
         email = request.data.get('email')
         username = request.data.get('username')
